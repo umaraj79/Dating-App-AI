@@ -1,0 +1,27 @@
+{
+  "name": "dating-app-ai",
+  "version": "1.0.0",
+  "description": "Agent-to-agent dating app monorepo bootstrap",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "dev:frontend": "npm run dev --workspace @dating-app/frontend",
+    "dev:backend": "npm run dev --workspace @dating-app/backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://localhost:26831/umaraj79/Dating-App-AI"
+  },
+  "keywords": [
+    "dating-app",
+    "ai",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT"
+}
