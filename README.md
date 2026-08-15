@@ -1,40 +1,46 @@
 # Dating-App-AI
 
-Create an agent-to-agent dating app with production-ready engineering standards.
+Agent-to-agent dating app repository with a production-ready engineering baseline.
 
-## Current status
+## Monorepo structure
 
-This repository is currently at project bootstrap stage (documentation-only baseline).
+- `/apps/frontend` – React + Vite TypeScript frontend.
+- `/apps/backend` – Express TypeScript API.
+- `/apps/backend/db/migrations` – SQL migration files.
+- `/.github/workflows/ci.yml` – CI for lint, test, and build.
 
-## Engineering operating standard
+## Quick start
 
-All work in this repository should follow this loop:
+```bash
+npm install
+npm run dev:frontend
+npm run dev:backend
+```
 
-1. Understand existing behavior and architecture.
-2. Implement the smallest safe, high-value change.
-3. Validate with tests/build checks relevant to the change.
-4. Run security review and fix findings.
-5. Review diffs for scope, quality, and accidental secrets.
-6. Commit focused, auditable changes.
+Frontend defaults to Vite's dev server port and backend defaults to `PORT=3000`.
 
-## Minimum quality gates for meaningful code changes
+## Environment
 
-- Preserve existing behavior unless explicitly changing it.
-- Add/update tests when behavior changes.
-- Run relevant lint/build/test commands that already exist in the project.
-- Review security impact (auth, input validation, secrets, dependency risk).
-- Update documentation when behavior/setup changes.
+Create a local `.env` file from `.env.example` and adjust values as needed.
 
-## Prioritization
+## Available scripts
 
-When choosing the next improvement, prioritize:
+From repository root:
 
-1. Security vulnerabilities
-2. Data-loss/production-breaking bugs
-3. Core reliability and failing CI/builds/tests
-4. Performance and accessibility issues affecting users
-5. Coverage gaps and technical debt
+- `npm run lint`
+- `npm run test`
+- `npm run build`
 
-## Next implementation milestone
+## Current backend API
 
-Set up the initial application skeleton (frontend, backend, database, CI) with tests so future work can be validated automatically.
+- `GET /api/health` → health metadata.
+
+## Database baseline
+
+Initial SQL migration creates:
+
+- `agents`
+- `matches`
+- `messages`
+
+These tables provide the first data model for profiles, matchmaking, and chat.

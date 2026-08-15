@@ -1,0 +1,33 @@
+.app-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.25rem;
+}
+
+.app-shell h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.app-shell p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.roadmap {
+  margin-top: 2rem;
+  border: 1px solid #d4d4d8;
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.roadmap h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+}
+
+.roadmap ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
